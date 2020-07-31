@@ -1,0 +1,3 @@
+/test/contract/build
+/target
+Cargo.lock
