@@ -1,8 +1,4 @@
-TARGET := riscv64imac-unknown-none-elf
-DOCKER_IMAGE := jjy0/ckb-capsule-recipe-rust:2020-5-9
-
-# debug-in-docker:
-# 	docker run --rm -v `pwd`:/code -w/code ${DOCKER_IMAGE} bash -c 'make debug'
+default: debug release
 
 release:
 	mkdir -p build/release

@@ -8,11 +8,6 @@ edition = "2018"
 
 [dependencies]
 riscv = { git = "https://github.com/huwenchao/huobi-chain-1.git", branch = "update-muta-dep" }
-# riscv = { path = "/Users/huwenchao/code/cryptape/huobi-chain/services/riscv" }
-# cita_trie = "2.0"
-# async-trait = "0.1"
-# framework = { git = "https://github.com/nervosnetwork/muta", tag = "v0.2.0-alpha.1" }
-# core-storage = { git = "https://github.com/nervosnetwork/muta", tag = "v0.2.0-alpha.1" }
 protocol = { git = "https://github.com/nervosnetwork/muta", tag = "v0.2.0-alpha.1", package = "muta-protocol" }
 env_logger = "0.7.1"
 log = "0.4"

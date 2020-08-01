@@ -36,6 +36,8 @@ pub fn main() -> Result<String, Error> {
     debug!("{:?}", dbg_msg);
     let args = high_level::load_args_string()?;
     debug!("args: {:?}", args);
+
+    // env
     let cycle_limit = syscalls::get_cycle_limit();
     debug!("cycle_limit: {:?}", cycle_limit);
     let cycle_price = syscalls::get_cycle_price();
