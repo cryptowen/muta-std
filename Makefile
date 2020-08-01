@@ -10,6 +10,6 @@ test:
 	make -C test test
 
 publish-in-docker:
-		docker run --rm -it -v `pwd`:/code -v `pwd`/test/contract/target/.cargo/git:/root/.cargo/git -v `pwd`/test/contract/target/.cargo/registry:/root/.cargo/registry ${DOCKER_IMAGE} bash -c 'cd /code && cargo publish --target ${TARGET} --dry-run'
+	docker run --rm -it -v `pwd`:/code -v `pwd`/test/contract/target/.cargo/git:/root/.cargo/git -v `pwd`/test/contract/target/.cargo/registry:/root/.cargo/registry -v ${HOME}/.cargo/credentials:/root/.cargo/credentials -w/code ${DOCKER_IMAGE} bash -c 'cargo publish --target ${TARGET}'
 
 .PHONY: ci fmt test
