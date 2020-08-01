@@ -1,0 +1,20 @@
+[package]
+name = "huobichain-contract-demo"
+version = "0.1.0"
+authors = ["huwenchao <me@huwenchao.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+riscv = { git = "https://github.com/huwenchao/huobi-chain-1.git", branch = "update-muta-dep" }
+# riscv = { path = "/Users/huwenchao/code/cryptape/huobi-chain/services/riscv" }
+# cita_trie = "2.0"
+# async-trait = "0.1"
+# framework = { git = "https://github.com/nervosnetwork/muta", tag = "v0.2.0-alpha.1" }
+# core-storage = { git = "https://github.com/nervosnetwork/muta", tag = "v0.2.0-alpha.1" }
+protocol = { git = "https://github.com/nervosnetwork/muta", tag = "v0.2.0-alpha.1", package = "muta-protocol" }
+env_logger = "0.7.1"
+log = "0.4"
+hex = "0.4"
+mockall = "0.7.2"
