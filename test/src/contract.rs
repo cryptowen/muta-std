@@ -1,16 +1,13 @@
+use crate::helper::{init_logger, read_code, SimpleMockChain};
 use protocol::{
-    traits::{ServiceResponse, ServiceSDK},
     types::{Address, Hash, ServiceContext, ServiceContextParams},
     Bytes,
 };
 use riscv::{
     types::InterpreterType,
-    vm::{ChainInterface, Interpreter, InterpreterParams},
+    vm::{Interpreter, InterpreterParams},
 };
-use std::cell::RefCell;
-use std::rc::Rc;
-
-use crate::helper::{init_logger, read_code, MockChain, SimpleMockChain};
+use std::{cell::RefCell, rc::Rc};
 
 fn get_test_service_context() -> ServiceContext {
     let params = ServiceContextParams {

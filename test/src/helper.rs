@@ -1,12 +1,6 @@
-use protocol::{
-    traits::{ServiceResponse, ServiceSDK},
-    types::{Address, Hash, ServiceContext},
-    Bytes,
-};
+use protocol::{traits::ServiceResponse, types::Address, Bytes};
 use riscv::vm::ChainInterface;
-use std::collections::HashMap;
-use std::fs::File;
-use std::io::Read;
+use std::{collections::HashMap, fs::File, io::Read};
 
 use mockall::predicate::*;
 use mockall::*;
